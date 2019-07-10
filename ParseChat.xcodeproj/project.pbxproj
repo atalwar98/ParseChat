@@ -16,6 +16,8 @@
 		2F70D1B222D659BC0017A01E /* ParseChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F70D1B122D659BC0017A01E /* ParseChatTests.m */; };
 		2F70D1BD22D659BC0017A01E /* ParseChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F70D1BC22D659BC0017A01E /* ParseChatUITests.m */; };
 		2F70D1CC22D65C030017A01E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F70D1CB22D65C030017A01E /* LoginViewController.m */; };
+		2F70D1CF22D662990017A01E /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F70D1CE22D662990017A01E /* ChatViewController.m */; };
+		2F70D1D222D668270017A01E /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F70D1D122D668270017A01E /* ChatCell.m */; };
 		DD90118C873ECECF3FF857C8 /* Pods_ParseChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3F471796A323B39BB67645 /* Pods_ParseChat.framework */; };
 		E0EB2CDE14D19B518B2A9D01 /* Pods_ParseChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01EEA1ABD7336B150030026B /* Pods_ParseChatUITests.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +58,10 @@
 		2F70D1BE22D659BC0017A01E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F70D1CA22D65C030017A01E /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		2F70D1CB22D65C030017A01E /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2F70D1CD22D662990017A01E /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		2F70D1CE22D662990017A01E /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		2F70D1D022D668270017A01E /* ChatCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
+		2F70D1D122D668270017A01E /* ChatCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
 		4BA01D97271C1E8181149F4A /* Pods-ParseChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseChat.debug.xcconfig"; path = "Target Support Files/Pods-ParseChat/Pods-ParseChat.debug.xcconfig"; sourceTree = "<group>"; };
 		5E3F471796A323B39BB67645 /* Pods_ParseChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParseChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E0DF1844A8FB98E763761F /* Pods-ParseChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseChatUITests.release.xcconfig"; path = "Target Support Files/Pods-ParseChatUITests/Pods-ParseChatUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +102,7 @@
 		2F70D18C22D659BB0017A01E = {
 			isa = PBXGroup;
 			children = (
+				2F70D1D422D66A4C0017A01E /* Models */,
 				2F70D19722D659BB0017A01E /* ParseChat */,
 				2F70D1B022D659BC0017A01E /* ParseChatTests */,
 				2F70D1BB22D659BC0017A01E /* ParseChatUITests */,
@@ -121,12 +128,16 @@
 				2F70D19822D659BB0017A01E /* AppDelegate.h */,
 				2F70D19922D659BB0017A01E /* AppDelegate.m */,
 				2F70D19E22D659BB0017A01E /* Main.storyboard */,
+				2F70D1D022D668270017A01E /* ChatCell.h */,
+				2F70D1D122D668270017A01E /* ChatCell.m */,
 				2F70D1CA22D65C030017A01E /* LoginViewController.h */,
 				2F70D1CB22D65C030017A01E /* LoginViewController.m */,
 				2F70D1A122D659BC0017A01E /* Assets.xcassets */,
 				2F70D1A322D659BC0017A01E /* LaunchScreen.storyboard */,
 				2F70D1A622D659BC0017A01E /* Info.plist */,
 				2F70D1A722D659BC0017A01E /* main.m */,
+				2F70D1CD22D662990017A01E /* ChatViewController.h */,
+				2F70D1CE22D662990017A01E /* ChatViewController.m */,
 			);
 			path = ParseChat;
 			sourceTree = "<group>";
@@ -147,6 +158,13 @@
 				2F70D1BE22D659BC0017A01E /* Info.plist */,
 			);
 			path = ParseChatUITests;
+			sourceTree = "<group>";
+		};
+		2F70D1D422D66A4C0017A01E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		6D8ACCB1A25BF8CEB58EB0F5 /* Frameworks */ = {
@@ -394,6 +412,8 @@
 			files = (
 				2F70D1A822D659BC0017A01E /* main.m in Sources */,
 				2F70D19A22D659BB0017A01E /* AppDelegate.m in Sources */,
+				2F70D1CF22D662990017A01E /* ChatViewController.m in Sources */,
+				2F70D1D222D668270017A01E /* ChatCell.m in Sources */,
 				2F70D1CC22D65C030017A01E /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
